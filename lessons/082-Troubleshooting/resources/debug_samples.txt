@@ -1,0 +1,7 @@
+from random import choice
+from string import ascii_uppercase
+testwriter = ''.join(choice(ascii_uppercase) for i in range(500))
+while True:
+    f = open('myfile','w')
+    f.write(testwriter) # python will convert \n to os.linesep
+    f.close() # you can omit in most cases as the destructor will call it
